@@ -1,0 +1,13 @@
+Data:       27/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     generico
+File:       CWE-129_bad_01
+CWE atteso: CWE-129
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: First, the code validates the upper bound of the array index (`data < array.length`) but entirely fails to check if the lower bound is zero or greater. Consequently, negative user inputs or the default `Integer.MIN_VALUE` pass this check and trigger a program-crashing `ArrayIndexOutOfBoundsException`. To use a simple everyday example, this is like verifying an elevator request isn't above the top floor but forgetting to check for negative, non-existent floors, allowing an invalid input to break the system.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):ArrayIndexOutOfBoundsException
+Note:indica il nome della categoria senza averlo chiesto

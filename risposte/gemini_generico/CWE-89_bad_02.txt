@@ -1,0 +1,13 @@
+Data:       26/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     generico
+File:       CWE-89_bad_02
+CWE atteso: CWE-89
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The code reads untrusted user input from standard input and directly concatenates it into a SQL query string. This creates a classic SQL Injection vulnerability, allowing an attacker to manipulate the query logic by injecting arbitrary SQL commands. To fix this issue, the code must use a `PreparedStatement` with parameterized queries instead of a plain `Statement`.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):cita il numero della categoria
+Note: indica il nome della categoria senza averlo chiesto

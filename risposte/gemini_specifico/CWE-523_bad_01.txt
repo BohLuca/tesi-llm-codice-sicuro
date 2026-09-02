@@ -1,0 +1,13 @@
+Data:       28/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-523_bad_01
+CWE atteso: CWE-523
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The servlet generates a login form that submits the user's username and password to an unencrypted HTTP URL (`[http://hostname.com/j_security_check](http://hostname.com/j_security_check)`). Transmitting credentials over standard HTTP allows attackers to intercept the sensitive data in plain text via network sniffing. The form action should be updated to use a secure HTTPS connection to ensure encrypted transport.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):Nessuno
+Note:

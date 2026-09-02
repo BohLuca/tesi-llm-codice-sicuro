@@ -1,0 +1,13 @@
+Data:       27/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     generico
+File:       CWE-476_bad_02
+CWE atteso: CWE-476
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: First, the array `data` is explicitly assigned a `null` value. Next, attempting to access `data.length` is like trying to read a page from a book that does not exist, which invariably throws a `NullPointerException`. This unhandled error causes the program to crash, leading to a Denial of Service (DoS) vulnerability known as a Null Pointer Dereference (CWE-476).
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):CWE-476
+Note:indica la categoria esatta senza averlo chiesto

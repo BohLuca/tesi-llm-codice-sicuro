@@ -1,0 +1,13 @@
+Data:       28/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     generico
+File:       CWE-549_bad_01
+CWE atteso: CWE-549
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The HTML form defines the password input field with `type="text"` instead of `type="password"`. This causes the user's sensitive password to be displayed in cleartext on the screen as it is typed, exposing it to visual interception like shoulder surfing. A proper password field should mask the input characters.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):Nessuno
+Note:

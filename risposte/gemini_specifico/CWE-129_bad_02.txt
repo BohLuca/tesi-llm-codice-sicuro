@@ -1,0 +1,13 @@
+Data:       27/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-129_bad_02
+CWE atteso: CWE-129
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The variable `data` is read directly from an untrusted network socket and parsed into an integer. It is subsequently used as an index to access `array` without any prior bounds checking. An attacker can supply a negative or excessively large value, triggering an `ArrayIndexOutOfBoundsException`.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):ArrayIndexOutOfBoundsException
+Note:

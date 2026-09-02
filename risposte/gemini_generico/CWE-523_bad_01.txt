@@ -1,0 +1,13 @@
+Data:       28/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     generico
+File:       CWE-523_bad_01
+CWE atteso: CWE-523
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The login form explicitly submits sensitive credentials over an unencrypted connection by setting the form action to an `http://` URL. This vulnerability allows attackers on the network to easily intercept the plaintext username and password through packet sniffing. The action URL must be changed to use a secure `https://` endpoint to ensure the data is encrypted in transit.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):Nessuno
+Note:
