@@ -1,0 +1,39 @@
+﻿ID_locale,File_Juliet_originale,CWE,Fascia,Etichetta,Claude_gen_classe,Claude_gen_esito,Claude_spec_classe,Claude_spec_esito,Gemini_gen_classe,Gemini_gen_esito,Gemini_spec_classe,Gemini_spec_esito,Data_Claude,Data_Gemini
+CWE-23_bad_01,CWE23_Relative_Path_Traversal__Environment_01.java,CWE-23,Alta,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,26/08/2026
+CWE-23_bad_02,CWE23_Relative_Path_Traversal__console_readLine_02.java,CWE-23,Alta,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,26/08/2026
+CWE-23_bad_03,CWE23_Relative_Path_Traversal__PropertiesFile_05.java,CWE-23,Alta,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,26/08/2026
+CWE-23_good_01,CWE23_Relative_Path_Traversal__Environment_01.java,CWE-23,Alta,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,26/08/2026
+CWE-23_good_02,CWE23_Relative_Path_Traversal__console_readLine_02.java,CWE-23,Alta,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,26/08/2026
+CWE-23_good_03,CWE23_Relative_Path_Traversal__PropertiesFile_05.java,CWE-23,Alta,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,26/08/2026
+CWE-89_bad_01,CWE89_SQL_Injection__connect_tcp_execute_01.java,CWE-89,Alta,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,26/08/2026
+CWE-89_bad_02,CWE89_SQL_Injection__console_readLine_executeQuery_02.java,CWE-89,Alta,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,26/08/2026
+CWE-89_bad_03,CWE89_SQL_Injection__Environment_executeBatch_05.java,CWE-89,Alta,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,26/08/2026
+CWE-89_good_01,CWE89_SQL_Injection__connect_tcp_execute_01.java,CWE-89,Alta,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,26/08/2026
+CWE-89_good_02,CWE89_SQL_Injection__console_readLine_executeQuery_02.java,CWE-89,Alta,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,26/08/2026
+CWE-89_good_03,CWE89_SQL_Injection__Environment_executeBatch_05.java,CWE-89,Alta,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,26/08/2026
+CWE-129_bad_01,CWE129_Improper_Validation_of_Array_Index__Environment_array_read_check_max_01.java,CWE-129,Media,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,27/08/2026
+CWE-129_bad_02,CWE129_Improper_Validation_of_Array_Index__connect_tcp_array_read_no_check_02.java,CWE-129,Media,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,27/08/2026
+CWE-129_bad_03,CWE129_Improper_Validation_of_Array_Index__console_readLine_array_read_check_min_05.java,CWE-129,Media,vulnerabile,V,VP,V,VP,V,VP,V,VP,22/08/2026,27/08/2026
+CWE-129_good_01,CWE129_Improper_Validation_of_Array_Index__Environment_array_read_check_max_01.java,CWE-129,Media,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,27/08/2026
+CWE-129_good_02,CWE129_Improper_Validation_of_Array_Index__connect_tcp_array_read_no_check_02.java,CWE-129,Media,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,27/08/2026
+CWE-129_good_03,CWE129_Improper_Validation_of_Array_Index__console_readLine_array_read_check_min_05.java,CWE-129,Media,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,22/08/2026,27/08/2026
+CWE-476_bad_01,CWE476_NULL_Pointer_Dereference__String_01.java,CWE-476,Media,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,27/08/2026
+CWE-476_bad_02,CWE476_NULL_Pointer_Dereference__int_array_01.java,CWE-476,Media,vulnerabile,V,VP,V,VP,V,VP,V,VP,2308/2026,27/08/2026
+CWE-476_bad_03,CWE476_NULL_Pointer_Dereference__deref_after_check_01.java,CWE-476,Media,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,27/08/2026
+CWE-476_good_01,CWE476_NULL_Pointer_Dereference__String_01.java,CWE-476,Media,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,23/08/2026,27/08/2026
+CWE-476_good_02,CWE476_NULL_Pointer_Dereference__int_array_01.java,CWE-476,Media,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,23/08/2026,27/08/2026
+CWE-476_good_03,CWE476_NULL_Pointer_Dereference__deref_after_check_01.java,CWE-476,Media,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,23/08/2026,27/08/2026
+CWE-523_bad_01,CWE523_Unprotected_Cred_Transport__Servlet_01.java,CWE-523,Bassa,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,28/08/2026
+CWE-523_bad_02,CWE523_Unprotected_Cred_Transport__Servlet_02.java,CWE-523,Bassa,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,28/08/2026
+CWE-523_bad_03,CWE523_Unprotected_Cred_Transport__Servlet_05.java,CWE-523,Bassa,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,28/08/2026
+CWE-523_good_01,CWE523_Unprotected_Cred_Transport__Servlet_01.java,CWE-523,Bassa,non vulnerabile,NV,VN,NV,VN,V,FP,NV,VN,23/08/2026,28/08/2026
+CWE-523_good_02,CWE523_Unprotected_Cred_Transport__Servlet_02.java,CWE-523,Bassa,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,23/08/2026,28/08/2026
+CWE-523_good_03,CWE523_Unprotected_Cred_Transport__Servlet_05.java,CWE-523,Bassa,non vulnerabile,NV,VN,NV,VN,V,FP,NV,VN,23/08/2026,28/08/2026
+CWE-549_bad_01,CWE549_Missing_Password_Masking__Servlet_01.java,CWE-549,Bassa,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,28/08/2026
+CWE-549_bad_02,CWE549_Missing_Password_Masking__Servlet_02.java,CWE-549,Bassa,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,28/08/2026
+CWE-549_bad_03,CWE549_Missing_Password_Masking__Servlet_05.java,CWE-549,Bassa,vulnerabile,V,VP,V,VP,V,VP,V,VP,23/08/2026,28/08/2026
+CWE-549_good_01,CWE549_Missing_Password_Masking__Servlet_01.java,CWE-549,Bassa,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,24/08/2026,28/08/2026
+CWE-549_good_02,CWE549_Missing_Password_Masking__Servlet_02.java,CWE-549,Bassa,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,24/08/2026,28/08/2026
+CWE-549_good_03,CWE549_Missing_Password_Masking__Servlet_05.java,CWE-549,Bassa,non vulnerabile,NV,VN,NV,VN,NV,VN,NV,VN,24/08/2026,28/08/2026
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
