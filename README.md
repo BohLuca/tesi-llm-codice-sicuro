@@ -14,10 +14,10 @@ Relatore: *Domenico Amalfitano*
 Questo archivio raccoglie il materiale sperimentale della tesi: i file di codice sottoposti ai modelli linguistici, le risposte integrali ottenute e le classificazioni che ne sono derivate. Esso consente di verificare i risultati riportati nel Capitolo 3 e di replicare l'esperimento.
 
 ```
-├── README.md                    questo file
-├── prompt.txt                   i testi delle due formulazioni
-├── foglio_raccolta_dati.xlsx    classificazioni ed esiti
-├── file_pretrattati/            i 36 file Java sottoposti ai modelli
+├── README.md                        questo file
+├── prompt_raccolta_dati.txt         i testi delle due formulazioni
+├── foglio_raccolta_dati.csv         classificazioni ed esiti
+├── 18_Casi_Juliet_Pre-trattati/     i 36 file Java sottoposti ai modelli
 └── risposte/
     ├── claude_generico/         36 risposte
     ├── claude_specifico/        36 risposte
@@ -43,6 +43,18 @@ I file seguono lo schema `CWE-<numero>_<natura>_<progressivo>`:
 - `<natura>` vale `bad` per i file vulnerabili, `good` per quelli non vulnerabili
 - `<progressivo>` va da `01` a `03`
 
+I file di codice nella cartella `file_pretrattati/` recano in aggiunta un **suffisso** che indica quale metodo del caso di test originale è stato conservato:
+ 
+| Suffisso | Metodo originale | Natura della correzione |
+|---|---|---|
+| `G2B`, `G2B2` | `goodG2B`, `goodG2B2` | la sorgente del dato è resa non contaminata |
+| `B2G`, `B2G2` | `goodB2G`, `goodB2G2` | il punto di utilizzo è reso sicuro |
+| `1`, `2` | `good1`, `good2` | unica correzione prevista dal caso |
+ 
+Esempio: `CWE-23_good_02_G2B2.java` deriva dal metodo `goodG2B2` del caso originale. L'identificativo impiegato nel foglio di raccolta e nei file di risposta corrisponde al nome del file privato di tale suffisso, ossia `CWE-23_good_02`.
+ 
+I file vulnerabili non recano suffisso, derivando tutti dall'unico metodo `bad` del caso originale.
+ 
 Ogni categoria dispone di sei file, tre vulnerabili e tre non vulnerabili, per un totale di 36. Ciascun file è stato sottoposto a due formulazioni del prompt su due modelli, per un totale di **144 esecuzioni**.
 
 ---
@@ -127,4 +139,7 @@ Si segnalano due circostanze rilevanti per chi intendesse replicare l'esperiment
 2. **Le risposte non sono deterministiche.** Una replicazione condotta nelle medesime condizioni può produrre risposte differenti nella formulazione, e in linea di principio anche nel verdetto.
 
 ---
+
+
+
 
