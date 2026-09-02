@@ -1,0 +1,13 @@
+Data:       gg/mm/aaaa
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-23_good_03
+CWE atteso: CWE-23
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+REASON: The filename component `data` is a hardcoded constant ("foo") assigned in the branch that actually executes, with no external or attacker-controlled input (no user input, environment, request parameter, or file/network source) reaching the path. Since the concatenated path `root + data` is fully attacker-independent, no relative traversal sequence such as `../` can be injected. This is a CWE-23 sink pattern without a tainted source, so the traversal vulnerability is not present.
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente): CWE-23
+Note:

@@ -1,0 +1,14 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-89_bad_03
+CWE atteso: CWE-89
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+
+REASON: The `data` value comes from the untrusted environment variable `ADD` and is split into `names[]` without any validation, sanitisation, or encoding. Each element is concatenated directly into the SQL string passed to `Statement.addBatch()`, so a crafted value (e.g. containing a quote and appended SQL) can alter the query structure. Using a `PreparedStatement` with `?` placeholders and `setString()` would remove the flaw.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente): Nessuno
+Note:

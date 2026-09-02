@@ -1,0 +1,13 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-129_good_01
+CWE atteso: CWE-129
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+REASON: Although `data` comes from an untrusted source (the `ADD` environment variable), it is fully bounds-checked with `data >= 0 && data < array.length` before being used as an array index. The default value of `Integer.MIN_VALUE` also fails this check safely, and the else branch handles out-of-range input without touching the array.
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente):Nessuno
+Note:

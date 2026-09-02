@@ -1,0 +1,14 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     generico
+File:       CWE-89_bad_02
+CWE atteso: CWE-89
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+
+REASON: The `data` value is read directly from `System.in` without validation or sanitisation and is then concatenated into the SQL string passed to `Statement.executeQuery()`, giving classic SQL injection (CWE-89) — an input like `' OR '1'='1` alters the query's logic. Using a `PreparedStatement` with a bound `?` parameter would remove the flaw.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):CWE-89
+Note:Indica la categoria giusta

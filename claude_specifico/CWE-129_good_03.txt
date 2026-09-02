@@ -1,0 +1,14 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-129_good_03
+CWE atteso: CWE-129
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+
+REASON: The untrusted integer read from stdin is checked with both a lower bound (`data >= 0`) and an upper bound (`data < array.length`) before being used as an array index. Out-of-range values, including the `Integer.MIN_VALUE` default that persists if parsing or reading fails, fall into the else branch and print a message instead of indexing the array. This complete bounds check prevents any `ArrayIndexOutOfBoundsException`, so CWE-129 does not apply.
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente):CWE-129
+Note:

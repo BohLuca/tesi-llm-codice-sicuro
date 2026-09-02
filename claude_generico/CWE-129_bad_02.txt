@@ -1,0 +1,13 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     generico
+File:       CWE-129_bad_02
+CWE atteso: CWE-129
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The value of `data` is read from an untrusted network socket and parsed with `Integer.parseInt` without any range validation, then used directly as an array index (`array[data]`). Any value outside 0–4 — including the `Integer.MIN_VALUE` default that persists when the read fails or parsing throws — causes an `ArrayIndexOutOfBoundsException`, making this a CWE-129 improper validation of array index (attacker-controlled crash / denial of service).
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):CWE-129
+Note: indica la categoria corretta senza averlo chiesto

@@ -1,0 +1,14 @@
+Data:       23/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-549_bad_01
+CWE atteso: CWE-549
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+
+REASON: The password input field is declared as `type="text"` instead of `type="password"`, so the entered credential is rendered in cleartext on screen. This allows shoulder-surfing and exposes the password in screenshots or screen-sharing sessions, which is exactly CWE-549 (Missing Password Field Masking). Changing the input to `<input name="password" type="password" />` resolves it.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):CWE-549
+Note:
