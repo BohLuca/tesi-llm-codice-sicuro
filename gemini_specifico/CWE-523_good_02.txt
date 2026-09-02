@@ -1,0 +1,13 @@
+Data:       28/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-523_good_02
+CWE atteso: CWE-523
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+REASON: The HTML login form explicitly specifies the HTTPS protocol in its action attribute (`[https://hostname.com/j_security_check](https://hostname.com/j_security_check)`). This ensures that the user's credentials (username and password) are submitted over an encrypted TLS connection rather than plaintext HTTP. Therefore, the credentials are protected from interception during transport.
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente):Nessuno
+Note:

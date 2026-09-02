@@ -1,0 +1,13 @@
+Data:       26/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-89_bad_01
+CWE atteso: CWE-89
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The application reads untrusted input from a network socket and concatenates it directly into a SQL query string. Because a standard `Statement` is used instead of a parameterized `PreparedStatement`, the input is neither sanitized nor escaped before execution. This allows an attacker to manipulate the network payload to inject and execute arbitrary SQL commands.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):Nessuno
+Note:

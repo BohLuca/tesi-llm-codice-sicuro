@@ -1,0 +1,13 @@
+Data:       26/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     generico
+File:       CWE-89_bad_03
+CWE atteso: CWE-89
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The application constructs a SQL query by directly concatenating untrusted data derived from the `ADD` environment variable. By failing to use a `PreparedStatement` with parameterized queries, it allows an attacker to inject and execute arbitrary SQL commands. This is a classic SQL Injection vulnerability.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):SQL injection
+Note:indica il nome della categoria senza averlo chiesto

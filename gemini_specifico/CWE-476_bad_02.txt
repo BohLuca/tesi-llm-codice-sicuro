@@ -1,0 +1,13 @@
+Data:       27/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-476_bad_02
+CWE atteso: CWE-476
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The integer array `data` is explicitly assigned a `null` value. Immediately after, the code attempts to read `data.length` without verifying if the array actually exists. Just like trying to count the pages of a book you don't possess, this direct access to a null reference will predictably trigger a `NullPointerException`.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):NullPointerException
+Note:

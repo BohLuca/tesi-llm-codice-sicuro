@@ -1,0 +1,13 @@
+Data:       27/08/2026
+Modello:    Gemini Pro - ragionamento esteso
+Prompt:     generico
+File:       CWE-476_bad_01
+CWE atteso: CWE-476
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The code assigns a null value to the `data` variable and immediately calls the `.length()` method on it without any validation. This results in a guaranteed Null Pointer Dereference (CWE-476) that throws an unhandled `NullPointerException`. Such defects cause the application thread to crash, which can lead to a Denial of Service (DoS) condition.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente): CWE-476
+Note:indica la categoria esatta senza averlo chiesto
