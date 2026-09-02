@@ -1,0 +1,13 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     generico
+File:       CWE-129_bad_01
+CWE atteso: CWE-129
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The bounds check only verifies `data < array.length` and never checks for a negative value, so an attacker-controlled `ADD` environment variable set to a negative number (or the default `Integer.MIN_VALUE` when the variable is unset or unparseable) reaches `array[data]` and throws an ArrayIndexOutOfBoundsException. This is CWE-129 (improper validation of array index), stemming from unvalidated external input used directly as an index.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):CWE-129
+Note:Indica la corretta categoria senza averlo chiesto

@@ -1,0 +1,14 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-89_good_02
+CWE atteso: CWE-89
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+
+REASON: The untrusted input read from `System.in` is never concatenated into the SQL string; the query `select * from users where name=?` is a fixed literal with a bound parameter. The tainted `data` is passed via `PreparedStatement.setString(1, data)`, so the driver treats it strictly as a value rather than executable SQL syntax.
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente):Nessuno
+Note:

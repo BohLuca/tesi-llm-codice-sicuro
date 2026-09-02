@@ -1,0 +1,13 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     generico
+File:       CWE-129_good_02
+CWE atteso: CWE-129
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+REASON: The untrusted integer read from the socket is used as an array index only after a complete bounds check (`data >= 0 && data < array.length`), which rejects negative values (including the `Integer.MIN_VALUE` default) and out-of-range values alike. Parsing failures and I/O errors are handled, leaving `data` at a safe default that the same check rejects. Streams and the socket are closed in `finally`, so there is no resource leak either.
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente):Nessuno
+Note:

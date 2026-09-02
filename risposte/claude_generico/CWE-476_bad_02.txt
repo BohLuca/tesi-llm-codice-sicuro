@@ -1,0 +1,13 @@
+Data:       23/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     generico
+File:       CWE-476_bad_02
+CWE atteso: CWE-476
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The array reference `data` is explicitly set to `null` and then dereferenced via `data.length`, which is a guaranteed NULL pointer dereference (CWE-476). This throws a `NullPointerException` on every execution, causing an unhandled crash of the calling code since `run()` propagates it as a `Throwable`. A null check or valid array initialization before the dereference would fix it.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):CWE-476
+Note:indica la categoria esatta senza averlo chiesto

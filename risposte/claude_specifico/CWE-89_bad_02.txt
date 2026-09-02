@@ -1,0 +1,13 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-89_bad_02
+CWE atteso: CWE-89
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+REASON: The `data` variable is read directly from `System.in` via `BufferedReader.readLine()` without any validation, sanitisation, or allowlisting. It is then concatenated straight into the SQL string `"select * from users where name='"+data+"'"` and executed through `Statement.executeQuery()`. An attacker can inject a quote and arbitrary SQL clauses; a `PreparedStatement` with a bound parameter would be required to prevent this.
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente): Nessuno
+Note:

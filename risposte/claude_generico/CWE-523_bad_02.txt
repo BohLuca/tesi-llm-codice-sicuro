@@ -1,0 +1,14 @@
+Data:       23/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     generico
+File:       CWE-523_bad_02
+CWE atteso: CWE-523
+Etichetta:  vulnerabile
+------------------------------------------------------------
+VERDICT: VULNERABLE
+
+REASON: The login form's action URL uses the plaintext `http://` scheme, so the submitted `j_username` and `j_password` values are transmitted unencrypted and can be intercepted or modified by a network attacker (CWE-319, cleartext transmission of sensitive information). Serving a credential form over an insecure channel also allows an attacker to tamper with the form and redirect the POST to a host they control. The action should use `https://` (and the form itself should be served over HTTPS).
+------------------------------------------------------------
+Classe attribuita: [V]
+CWE indicato dal modello (se presente):CWE-319
+Note:indica categoria sbagliata senza averlo chiesto

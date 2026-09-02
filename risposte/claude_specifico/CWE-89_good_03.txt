@@ -1,0 +1,14 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-89_good_03
+CWE atteso: CWE-89
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+
+REASON: The tainted input from `System.getenv("ADD")` is only ever bound via `setString(1, names[i])` on a `PreparedStatement` whose SQL text is a fixed literal with a `?` placeholder, so the data can never alter the query structure. No string concatenation or interpolation of user-controlled data into the SQL occurs anywhere in the method. The batch execution and error handling do not reintroduce any unparameterized query construction.
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente):Nessuno
+Note:

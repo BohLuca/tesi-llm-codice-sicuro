@@ -1,0 +1,13 @@
+Data:       22/08/2026
+Modello:    Claude Opus 5 - ragionamento esteso
+Prompt:     CWE-specifico
+File:       CWE-89_good_01
+CWE atteso: CWE-89
+Etichetta:  non vulnerabile
+------------------------------------------------------------
+VERDICT: NOT VULNERABLE
+REASON: The untrusted socket-derived value is bound via `PreparedStatement.setString(1, data)` rather than concatenated into the query string, so it is treated as data and cannot alter the statement's structure. The query text itself is a fixed literal with no dynamic components. (Note: the SQL is syntactically invalid — an `INSERT ... VALUES` cannot take a `WHERE` clause — so this will fail at execution, but that is a correctness bug, not CWE-89.)
+------------------------------------------------------------
+Classe attribuita: [NV]
+CWE indicato dal modello (se presente): CWE-89
+Note: SQL sintatticamente invalida nell'originale Juliet — modello la rileva, la esclude da CWE-89
