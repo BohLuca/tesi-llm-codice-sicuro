@@ -1,0 +1,50 @@
+TESTI DELLE DUE FORMULAZIONI DEL PROMPT
+=======================================
+
+I segnaposto sono sostituiti a ogni esecuzione:
+  <CODE>       il contenuto del file Java pre-trattato
+  <CWE-ID>     l'identificativo della categoria (es. CWE-89)
+  <CWE-NAME>   la denominazione ufficiale MITRE (es. SQL Injection)
+
+
+PROMPT GENERICO
+---------------
+
+You are a security researcher analysing Java source code.
+
+Analyse the following Java code and determine whether it
+contains a security vulnerability.
+
+Answer in English, using exactly this format:
+VERDICT: <VULNERABLE or NOT VULNERABLE>
+REASON: <brief justification, at most three sentences>
+
+Code:
+<CODE>
+
+
+PROMPT CWE-SPECIFICO
+--------------------
+
+You are a security researcher analysing Java source code.
+
+Analyse the following Java code and determine whether it
+contains a <CWE-ID> (<CWE-NAME>) vulnerability.
+
+Answer in English, using exactly this format:
+VERDICT: <VULNERABLE or NOT VULNERABLE>
+REASON: <brief justification, at most three sentences>
+
+Code:
+<CODE>
+
+
+DENOMINAZIONI IMPIEGATE
+-----------------------
+
+CWE-23    Relative Path Traversal
+CWE-89    SQL Injection
+CWE-129   Improper Validation of Array Index
+CWE-476   NULL Pointer Dereference
+CWE-523   Unprotected Transport of Credentials
+CWE-549   Missing Password Field Masking
